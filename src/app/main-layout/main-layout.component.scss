@@ -1,31 +1,127 @@
-.background-image{
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-  }
-}
-
+@use "../../styles/globals/colors" as c;
+@use "../../styles/globals/variables" as v;
+@use "../../styles/helpers/mixins" as m;
 .popup-wrapper{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
-
+  background-color: rgba(c.$black,0.5);
   .popup-container{
+    position: relative;
     width: 60%;
     min-height: 60vh;
     margin: 0 auto;
     margin-top: 30px;
-    background-color: red;
-
+    background-color: c.$gray-7;
+    border-radius: v.$radious;
+    .banner-container{
+      .image-container{
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        min-height: 37vh;
+        border-radius: v.$radious;
+        overflow: hidden;
+        img{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+        }
+        @include m.mq('tablet'){
+          position: relative;
+          min-height: 27vh;
+          img{
+            object-position: 17%;
+          }
+        }
+      }
+      .popup-header-row{
+        padding: 15px;
+        position: fixed;
+        width: 58%;
+        top: 30px;
+        color: c.$white;
+        display: flex;
+        justify-content: space-between;
+        .labels-container{
+          padding: 5px;
+          background-color: rgba(c.$gray-6, 0.9);
+          border-radius: 35px;
+          .slots{
+            display: inline-block;
+            background-color: rgba(c.$white, 0.15);
+            border-radius: 13px;
+            padding: 5px 10px;
+            font-family: HelveticaNeue-Medium;
+            font-size: 13px;
+            letter-spacing: 1px;
+          }
+          .date{
+            font-family: HelveticaNeue-Bold;
+            padding: 0 15px;
+            font-size: 15px;
+          }
+          @include m.mq('tablet'){
+            .slots{
+              font-size: 12px;
+            }
+            .date{
+              font-size: 14px;
+            }
+          }
+        }
+        .cancel-button{
+          width: 35px;
+          height: 35px;
+          background-color: rgba(c.$gray-6, 0.9);
+          border-radius: 50%;
+          fill: c.$white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          svg{
+            width: 20px;
+            transition: v.$time;
+          }
+          &:hover{
+            svg{
+              transform: rotate(90deg);
+            }
+          }
+        }
+        @include m.mq('tablet'){
+          position: relative;
+          top: 0;
+          .cancel-button{
+            display: none;
+          }
+        }
+      }
+      .banner-info-row{
+        padding: 0 43px;
+        .banner-title{
+          font-size: 20px;
+          font-family: "HelveticaNeue-Bold";
+          color: c.$white;
+          margin: 20px 0 10px 0 ;
+        }
+        .text-container{
+          font-size: 16px;
+          font-family: "Helvetica Neue";
+          color: c.$white;
+          opacity: 0.9;
+          margin: 0;
+        }
+      }
+    }
+    @include m.mq('tablet'){
+      width: 100%;
+    }
   }
 }

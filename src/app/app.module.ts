@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CashGamesComponent } from './pages/cash-games/cash-games.component';
-import { SpringSeriesComponent } from './pages/spring-series/spring-series.component';
-import { FinalStageComponent } from './pages/final-stage/final-stage.component';
+import { CashGamesComponent } from './main-layout/components/cash-games/cash-games.component';
+import { SpringSeriesComponent } from './main-layout/components/spring-series/spring-series.component';
+import { FinalStageComponent } from './main-layout/components/final-stage/final-stage.component';
 
 @NgModule({
   declarations: [

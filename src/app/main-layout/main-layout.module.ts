@@ -10,7 +10,6 @@ import { MainLayoutComponent } from './main-layout.component';
   ],
   imports: [
     CommonModule,
-
   ]
 })
 export class MainLayoutModule { }

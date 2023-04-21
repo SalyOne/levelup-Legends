@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {MainLayoutComponent} from "./main-layout/main-layout.component";
-import {CashGamesComponent} from "./pages/cash-games/cash-games.component";
+import {CashGamesComponent} from "./main-layout/components/cash-games/cash-games.component";
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'cash-games',
         pathMatch: 'full'
       },
       {
