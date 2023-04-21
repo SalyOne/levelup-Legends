@@ -67,6 +67,7 @@
             font-size: 15px;
           }
           @include m.mq('tablet'){
+            padding: 0;
             .slots{
               font-size: 12px;
             }
@@ -98,6 +99,7 @@
         @include m.mq('tablet'){
           position: relative;
           top: 0;
+          width: 100%;
           .cancel-button{
             display: none;
           }
@@ -118,10 +120,55 @@
           opacity: 0.9;
           margin: 0;
         }
+        @include m.mq('tablet'){
+          padding: 0 15px;
+          .banner-title{
+            margin: 0 0 10px 0 ;
+            font-size: 16px;
+          }
+          .text-container{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .faq-section{
+      margin-top: 30px;
+      .section-title{
+        font-family: HelveticaNeue-Medium;
+        font-size: 18px;
+        color: c.$white;
+        margin-bottom: 25px;
+      }
+      .faq-item{
+        padding-bottom: 10px;
+      }
+      .faq-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        padding: 5px 25px;
+        background-color: c.$gray-3;
+        cursor: pointer;
+        .title{
+          font-family: "Helvetica Neue";
+          font-size: 15px;
+          color: c.$white;
+        }
+        .icon-container{
+          svg{
+            fill: c.$white;
+          }
+        }
       }
     }
     @include m.mq('tablet'){
       width: 100%;
     }
   }
+}
+
+.container-def{
+  padding: 0 43px;
 }
