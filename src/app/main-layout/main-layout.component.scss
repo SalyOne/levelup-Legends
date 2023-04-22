@@ -135,6 +135,49 @@
         }
       }
     }
+
+    .tabs-container{
+      width: 100%;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        background-color: c.$gray-2;
+        border-radius: 12px;
+        padding: 0;
+        li{
+          width: calc(100% /3);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          color: c.$white;
+          height: 77px;
+          cursor: pointer;
+          transition: v.$time;
+          span{
+            display: block;
+            &.date{
+              font-family: "Helvetica Neue";
+              font-size: 12px;
+            }
+            &.title{
+              font-family: HelveticaNeue-Bold;
+              font-size: 16px;
+            }
+          }
+          &:hover{
+            background-color: c.$orange-2;
+            //padding: 25px 0;
+            border-radius: 12px;
+            transform: scale(1.1);
+
+
+          }
+        }
+      }
+    }
+
+
     .section-row{
       .section-title{
         font-family:"HelveticaNeue-Medium";
