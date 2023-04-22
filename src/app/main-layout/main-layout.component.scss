@@ -2,7 +2,8 @@
 @use "../../styles/globals/variables" as v;
 @use "../../styles/helpers/mixins" as m;
 .popup-wrapper{
-  position: absolute;
+  position: fixed;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   width: 100%;
@@ -10,10 +11,11 @@
   background-color: rgba(c.$black,0.5);
   .popup-container{
     position: relative;
-    width: 60%;
+    width: 55%;
     min-height: 60vh;
     margin: 0 auto;
     margin-top: 30px;
+    padding-bottom: 100px;
     background-color: c.$gray-7;
     border-radius: v.$radious;
     .banner-container{
@@ -22,7 +24,7 @@
         z-index: 0;
         width: 100%;
         min-height: 37vh;
-        border-radius: v.$radious;
+        border-radius: v.$radious v.$radious 0 0;
         overflow: hidden;
         img{
           position: absolute;
@@ -99,7 +101,7 @@
         @include m.mq('tablet'){
           position: relative;
           top: 0;
-          width: 100%;
+          width:unset;
           .cancel-button{
             display: none;
           }
@@ -132,14 +134,18 @@
         }
       }
     }
-    .faq-section{
-      margin-top: 30px;
+    .section-row{
       .section-title{
-        font-family: HelveticaNeue-Medium;
+        font-family:"HelveticaNeue-Medium";
+        font-weight: normal;
         font-size: 18px;
         color: c.$white;
         margin-bottom: 25px;
       }
+
+    }
+    .faq-section{
+      margin-top: 30px;
       .faq-item{
         padding-bottom: 10px;
       }
@@ -161,6 +167,12 @@
             fill: c.$white;
           }
         }
+      }
+    }
+    .similar-section{
+      .carousel-container{
+        overflow: hidden;
+        height: 270px;
       }
     }
     @include m.mq('tablet'){
