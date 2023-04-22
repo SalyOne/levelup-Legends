@@ -1,6 +1,7 @@
 @use "../../styles/globals/colors" as c;
 @use "../../styles/globals/variables" as v;
 @use "../../styles/helpers/mixins" as m;
+@import "../../styles/partials/button";
 .popup-wrapper{
   position: fixed;
   overflow-y: scroll;
@@ -45,7 +46,7 @@
       .popup-header-row{
         padding: 15px;
         position: fixed;
-        width: 58%;
+        width: 53%;
         top: 30px;
         color: c.$white;
         display: flex;
@@ -173,6 +174,23 @@
       .carousel-container{
         overflow: hidden;
         height: 270px;
+      }
+    }
+
+    .sticky-label{
+      position: fixed;
+      bottom: 0;
+      width:calc(55% - 5px);
+      height: 70px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: c.$gray-8;
+      border-top: 5px solid c.$orange-1;
+      @include m.mq('tablet'){
+        height: 60px;
+        width: 100%;
       }
     }
     @include m.mq('tablet'){
