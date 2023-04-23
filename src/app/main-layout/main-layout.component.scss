@@ -51,6 +51,7 @@
         color: c.$white;
         display: flex;
         justify-content: space-between;
+        z-index: 1;
         .labels-container{
           padding: 5px;
           background-color: rgba(c.$gray-6, 0.9);
@@ -165,13 +166,13 @@
               font-size: 16px;
             }
           }
-          &:hover{
+
+          &:hover,
+          &.active{
             background-color: c.$orange-2;
             //padding: 25px 0;
             border-radius: 12px;
             transform: scale(1.1);
-
-
           }
         }
       }

@@ -20,24 +20,26 @@
         </div>
       </div>
       <div class="container-def">
-        <!--      //tabs place -->
         <div class="tabs-container">
           <ul>
-            <li>
+            <li  routerLinkActive="active" [routerLink]="['/cash-games']">
               <span class="date">1 - 29 აპრილი</span>
               <span class="title">Cash Games</span>
             </li>
-            <li>
+            <li routerLinkActive="active" [routerLink]="['/spring-series']">
               <span class="date">13 - 29 აპრილი</span>
               <span class="title">Spring Series</span>
             </li>
-            <li>
+            <li routerLinkActive="active" [routerLink]="['/final-stage']">
               <span class="date">30 აპრილი</span>
               <span class="title">Final Stage</span>
             </li>
           </ul>
         </div>
-        <!--      //after tabs -->
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+
         <section class="faq-section section-row">
           <h2 class="section-title">წესები და პირობები</h2>
           <div class="faq-item">

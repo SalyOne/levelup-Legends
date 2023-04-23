@@ -7,6 +7,7 @@ import { CashGamesComponent } from './main-layout/components/cash-games/cash-gam
 import { SpringSeriesComponent } from './main-layout/components/spring-series/spring-series.component';
 import { FinalStageComponent } from './main-layout/components/final-stage/final-stage.component';
 import {MainLayoutModule} from "./main-layout/main-layout.module";
+import {HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import {MainLayoutModule} from "./main-layout/main-layout.module";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MainLayoutModule
+    MainLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

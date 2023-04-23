@@ -1,0 +1,164 @@
+@use "../../../../styles/globals/colors" as c;
+@use "../../../../styles/helpers/mixins" as m;
+@import "../../../../styles/partials/card";
+@import "../../../../styles/partials/button";
+
+.card-container{
+  margin-top: 30px;
+  .card-body{
+    position: relative;
+    padding-bottom: 20px;
+    .card-header{
+      flex-direction: column;
+    }
+    .content{
+      margin: 0 auto;
+      width: 70%;
+      color: c.$white;
+      text-align: center;
+      .schedule{
+        border: 3px solid c.$orange-2;
+        border-radius: 10px;
+        box-shadow: 0 0px 15px -2px c.$orange-2, 0 0px 15px -5px c.$orange-2 inset;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin:  10px 0;
+        .time{
+          padding: 0 10px;
+          font-family: HelveticaNeue;
+          font-size: 18px;
+        }
+        .icon{
+          background-color: c.$orange-2;
+          width: 40px;
+          height: 30px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          border-radius: 0% 14% 14% 0% / 0% 48% 51% 0% ;
+          padding-right: 2px;
+          svg{
+            fill: c.$white;
+          }
+        }
+      }
+      .text-container{
+        width: 80%;
+        margin: 0 auto;
+        p{
+          margin: 10px 0;
+          opacity: 0.8;
+        }
+      }
+    }
+    .background{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      img{
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.panel-container{
+  border-radius: 16px;
+  border: 4px solid c.$gray-2;
+  overflow: hidden;
+  background-color: c.$gray-8;
+  padding: 25px;
+  margin-top: 25px;
+  .panel-title{
+    margin: 0;
+    color: c.$white;
+    font-family: "HelveticaNeue-Bold", sans-serif;
+    font-size: 20px;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  .panel-body{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    width: 100%;
+    //padding: 25px;
+    .each-item{
+      position: relative;
+      width: calc(50% - 8px);
+      .image-container{
+        position: relative;
+        width: 100%;
+        height: 104px;
+        border-radius: 16px;
+        overflow: hidden;
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: right;
+        }
+      }
+      .content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .tournament-info{
+          display: flex;
+          flex-direction: column;
+          padding-left: 20px;
+          .title{
+            color: c.$white;
+            font-family: "HelveticaNeue-Bold", sans-serif;
+            font-size: 15px;
+            padding-bottom: 10px;
+          }
+          .info{
+            &.amount{
+              color: c.$yellow-1;
+              font-family: "HelveticaNeue-Bold", sans-serif;
+              font-size: 24px;
+            }
+            &.date{
+              color: c.$white;
+              font-family: "HelveticaNeue-Medium", sans-serif;
+              font-size: 14px;
+              background-color: c.$custard;
+              padding: 5px 20px;
+              border-radius: 15px 15px 0 15px;
+            }
+          }
+        }
+      }
+      &.long{
+        width: 100%;
+        flex-grow: 1;
+        .content{
+          justify-content: center;
+
+        }
+      }
+    }
+  }
+  .additional-info{
+    font-family: "HelveticaNeue-Light", sans-serif;
+    font-size: 15px;
+    color: c.$white;
+  }
+
+}

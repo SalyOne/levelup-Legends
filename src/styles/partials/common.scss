@@ -1,0 +1,5 @@
+@use "../globals/colors" as c;
+.additional-info{
+  font-size: 15px;
+  color: c.$white;
+}

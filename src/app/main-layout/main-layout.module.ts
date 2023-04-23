@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { MainLayoutComponent } from './main-layout.component';
 import {DragScrollModule} from "ngx-drag-scroll";
 import { ImageCarouselComponent } from './parts/image-carousel/image-carousel.component';
+import {HttpClientModule} from "@angular/common/http";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 
 @NgModule({
@@ -13,7 +15,11 @@ import { ImageCarouselComponent } from './parts/image-carousel/image-carousel.co
   ],
   imports: [
     CommonModule,
-    DragScrollModule
+    DragScrollModule,
+    HttpClientModule,
+    RouterLinkActive,
+    RouterLink,
+    RouterOutlet
   ],
   exports:[
     MainLayoutComponent
