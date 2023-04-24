@@ -245,4 +245,8 @@
 
 .container-def{
   padding: 0 43px;
+
+  @include m.mq('tablet'){
+    padding: 0 15px;
+  }
 }
