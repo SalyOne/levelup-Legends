@@ -39,7 +39,21 @@
       }
     }
   }
-  .cart-footer{
+
+  &.multiple-section{
+    .card-body{
+      padding: 20px ;
+      .card-section{
+        .card-section-content{
+          background-color: c.$gray-3;
+          border-radius: 16px;
+          padding: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .card-footer{
     .additional-info{
       font-family: "HelveticaNeue-Light", sans-serif;
       font-size: 15px;
@@ -48,6 +62,9 @@
       width: 100%;
       display: block;
       margin-top: 20px;
+      a{
+        color: c.$orange-2;
+      }
     }  }
   &.only-header{
     .card-header{
