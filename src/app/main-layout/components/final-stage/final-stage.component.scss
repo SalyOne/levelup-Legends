@@ -1,20 +1,25 @@
-
 @use "../../../../styles/globals/colors" as c;
 @use "../../../../styles/helpers/mixins" as m;
 @import "../../../../styles/partials/card";
 @import "../../../../styles/partials/button";
+@import "../../../../styles/partials/panel";
 
-.travel-container{
+.card-container {
+  margin-bottom: 20px;
+}
+
+.travel-container {
   display: flex;
   //height: 600px;
   //width: 100%;
   padding: 0 15px;
   gap: 15px;
-  &>div{
 
+  & > div {
     width: 50%;
   }
-  .travel-item{
+
+  .travel-item {
     width: 100%;
     background-color: c.$gray-6;
     color: c.$white;
@@ -24,24 +29,93 @@
     padding: 20px;
     position: relative;
     font-family: HelveticaNeue;
-    .title{
+
+    .title {
       margin: 0;
       margin-bottom: 5px;
     }
-    .image-container{
+
+    .image-container {
       position: absolute;
       right: 15px;
       top: 0;
     }
-    .span-list{
-      span{
+
+    .span-list {
+      span {
         display: block;
       }
     }
-    .text{
+
+    .text {
       color: c.$white;
       font-size: 14px;
 
+    }
+  }
+
+  @include m.mq("tablet") {
+    flex-direction: column;
+    gap: 0;
+    & > div {
+      width: 100%;
+    }
+    .travel-item {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.panel-container {
+  .sub-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .news-row {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 15px;
+      position: relative;
+      overflow: hidden;
+      background-color: c.$gray-5;
+      border-radius: 12px;
+      margin: 10px 0;
+      padding: 12px 0;
+      width: 60%;
+      text-align: center;
+      &:after {
+        content: "";
+        width: 4px;
+        height: 46px;
+        border-radius: 0 5px 5px 0;
+        background-color: c.$orange-2;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        box-shadow: 0 0px 10px c.$orange-2;
+      }
+      .text {
+        margin-left: 22px;
+        color: c.$white;
+        font-size: 15px;
+        font-family: HelveticaNeue-Light;
+      }
+
+      @include m.mq('tablet') {
+        gap: 10px;
+        background-color: c.$gray-2;
+        width: 100%;
+        .text {
+          margin-left: 15px;
+          font-size: 13px;
+        }
+      }
     }
   }
 }

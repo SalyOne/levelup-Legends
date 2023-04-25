@@ -2,6 +2,7 @@
 @use "../../../../styles/helpers/mixins" as m;
 @import "../../../../styles/partials/card";
 @import "../../../../styles/partials/button";
+@import "../../../../styles/partials/panel";
 
 .card-container{
   margin-top: 30px;
@@ -121,111 +122,3 @@
   }
 }
 
-.panel-container{
-  border-radius: 16px;
-  border: 4px solid c.$gray-2;
-  overflow: hidden;
-  background-color: c.$gray-8;
-  padding: 25px;
-  margin-top: 25px;
-  .panel-title{
-    margin: 0;
-    color: c.$white;
-    font-family: "HelveticaNeue-Bold", sans-serif;
-    font-size: 20px;
-    padding-bottom: 25px;
-    text-align: center;
-  }
-  .panel-body{
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    width: 100%;
-    //padding: 25px;
-    .each-item{
-      position: relative;
-      width: calc(50% - 8px);
-      .image-container{
-        position: relative;
-        width: 100%;
-        height: 104px;
-        border-radius: 16px;
-        overflow: hidden;
-        img{
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          object-position: right;
-        }
-      }
-      .content{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        .tournament-info{
-          display: flex;
-          flex-direction: column;
-          padding-left: 20px;
-          .title{
-            color: c.$white;
-            font-family: "HelveticaNeue-Bold", sans-serif;
-            font-size: 15px;
-            padding-bottom: 10px;
-          }
-          .info{
-            &.amount{
-              color: c.$yellow-1;
-              font-family: "HelveticaNeue-Bold", sans-serif;
-              font-size: 24px;
-            }
-            &.date{
-              color: c.$white;
-              font-family: "HelveticaNeue-Medium", sans-serif;
-              font-size: 14px;
-              background-color: c.$custard;
-              padding: 5px 20px;
-              border-radius: 15px 15px 0 15px;
-            }
-          }
-        }
-      }
-      &.long{
-        width: 100%;
-        flex-grow: 1;
-        .content{
-          justify-content: center;
-        }
-      }
-      @include m.mq('tablet'){
-        width: 100%;
-      }
-    }
-  }
-  .additional-info{
-    font-family: "HelveticaNeue-Light", sans-serif;
-    font-size: 15px;
-    color: c.$white;
-    text-align: center;
-    width: 100%;
-    display: block;
-    margin-top: 20px;
-  }
-
-  @include m.mq('tablet'){
-    background-color: unset;
-    border: 0;
-    padding: 0;
-    .panel-title{
-      text-align: left;
-    }
-  }
-}
