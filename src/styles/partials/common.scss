@@ -3,3 +3,21 @@
   font-size: 15px;
   color: c.$white;
 }
+.scrollable{
+  overflow-y: scroll;
+  max-height: 400px;
+  padding-right: 10px;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: c.$gray-2;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: c.$orange-1;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: c.$orange-2;
+  }
+}

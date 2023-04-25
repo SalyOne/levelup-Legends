@@ -1,0 +1,47 @@
+
+@use "../../../../styles/globals/colors" as c;
+@use "../../../../styles/helpers/mixins" as m;
+@import "../../../../styles/partials/card";
+@import "../../../../styles/partials/button";
+
+.travel-container{
+  display: flex;
+  //height: 600px;
+  //width: 100%;
+  padding: 0 15px;
+  gap: 15px;
+  &>div{
+
+    width: 50%;
+  }
+  .travel-item{
+    width: 100%;
+    background-color: c.$gray-6;
+    color: c.$white;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    font-family: HelveticaNeue;
+    .title{
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    .image-container{
+      position: absolute;
+      right: 15px;
+      top: 0;
+    }
+    .span-list{
+      span{
+        display: block;
+      }
+    }
+    .text{
+      color: c.$white;
+      font-size: 14px;
+
+    }
+  }
+}
