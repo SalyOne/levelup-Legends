@@ -21,6 +21,7 @@
       font-family: HelveticaNeue-Bold;
       font-size: 20px;
       padding: 25px;
+
     }
     &:after{
       content: "";
@@ -37,6 +38,9 @@
     @include m.mq('tablet'){
       .title{
         font-size: 16px;
+        img{
+          width: 280px;
+        }
       }
     }
   }
